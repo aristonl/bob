@@ -1,0 +1,2 @@
+# BOB
+Better Opensource Bootloader
