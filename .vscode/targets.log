@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Aug 21 21:08:32 2022
+# Make data base, printed on Wed Aug 24 00:11:06 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/fire/BOB
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -139,7 +139,7 @@ XDG_RUNTIME_DIR = /mnt/wslg/runtime-dir
 # makefile (from 'Makefile', line 5)
 Directories = $(wildcard Source/*)
 # environment
-VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-68759b0a-a9b9-405b-8b6d-e8ee807a98f8.sock
+VSCODE_IPC_HOOK_CLI = /mnt/wslg/runtime-dir/vscode-ipc-786fc485-bf5f-4519-96f5-264c5189f264.sock
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -161,7 +161,7 @@ WSL_DISTRO_NAME = Arch
 # makefile (from 'Makefile', line 1)
 rwildcard = $(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(subst *,%,$2),$d))
 # variable set hash-table stats:
-# Load=75/1024=7%, Rehash=0, Collisions=1/145=1%
+# Load=75/1024=7%, Rehash=0, Collisions=1/180=1%
 
 # Pattern-specific Variable Values
 
@@ -178,7 +178,7 @@ rwildcard = $(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(
 # Source/Library/Font.hpp (device 2080, inode 114556): could not be opened.
 # Source/Library/GUID.hpp (device 2080, inode 114559): could not be opened.
 # Source/Library/TableHeaders.hpp (device 2080, inode 114565): could not be opened.
-# . (device 2080, inode 84): 8 files, no impossibilities.
+# . (device 2080, inode 84): 10 files, no impossibilities.
 # Source/Library/TextProtocol.hpp (device 2080, inode 114566): could not be opened.
 # Source/Library/ELF.hpp (device 2080, inode 114552): could not be opened.
 # Source/main.cpp (device 2080, inode 114573): could not be opened.
@@ -188,7 +188,7 @@ rwildcard = $(foreach d,$(wildcard $(1:=/*)),$(call rwildcard,$d,$2) $(filter $(
 # Source/Library/Framebuffer.hpp (device 2080, inode 114557): could not be opened.
 # Source/Library/Image.hpp (device 2080, inode 114561): could not be opened.
 
-# 28 files, no impossibilities in 18 directories.
+# 30 files, no impossibilities in 18 directories.
 
 # Implicit Rules
 
@@ -210,7 +210,7 @@ Makefile:
 # Not a target:
 Source/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-21 21:08:20.653708941
+#  Last modified 2022-08-21 21:11:55.213683503
 #  File has been updated.
 #  Successfully updated.
 
@@ -223,57 +223,63 @@ Source/main.cpp:
 all: Build/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# * := 
+# automatic
+# < := Build/main.o
+# automatic
+# + := Build/main.o
+# automatic
+# % := 
+# automatic
+# ^ := Build/main.o
+# automatic
+# ? := Build/main.o
+# automatic
+# | := 
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+# Load=8/32=25%, Rehash=0, Collisions=137/47=291%
 #  recipe to execute (from 'Makefile', line 12):
 	@-mkdir -p ../Build/ISO/EFI/BOOT/
 	@x86_64-w64-mingw32-gcc $(Objects) -Werror -m64 -nostdlib -shared -Wl,-dll -Wl,--subsystem,10 -e boot -o bootx64.efi
 
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 Build/main.o: Source/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  File does not exist.
+#  Last modified 2022-08-21 21:12:00.523682855
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := Build/main.o
-# automatic
-# * := main
-# automatic
-# < := Source/main.cpp
-# automatic
-# + := Source/main.cpp
-# automatic
-# % := 
-# automatic
-# ^ := Source/main.cpp
-# automatic
-# ? := Source/main.cpp
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 8):
 	@-mkdir -p $(@D)
 	@-x86_64-w64-mingw32-gcc -Werror -m64 -maccumulate-outgoing-args -ffreestanding -c $^ -o $@
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/21=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/22=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 49 / storage = 783 B / avg = 15 B
-# current buf: size = 8162 B / used = 783 B / count = 49 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 51 / storage = 801 B / avg = 15 B
+# current buf: size = 8162 B / used = 801 B / count = 51 / avg = 15 B
+ 
 
-# strcache performance: lookups = 62 / hit rate = 20%
+# strcache performance: lookups = 65 / hit rate = 21%
 # hash-table stats:
-# Load=49/8192=1%, Rehash=0, Collisions=1/62=2%
-# Finished Make data base on Sun Aug 21 21:08:32 2022
+# Load=51/8192=1%, Rehash=0, Collisions=1/65=2%
+# Finished Make data base on Wed Aug 24 00:11:06 2022
 
  
