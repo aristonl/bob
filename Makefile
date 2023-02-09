@@ -6,8 +6,8 @@ Directories = $(wildcard Source/*)
 
 Build/%.o: Source/%.cpp
 	@-mkdir -p $(@D)
-	@-x86_64-w64-mingw32-gcc -Werror -m64 -maccumulate-outgoing-args -ffreestanding -c $^ -o $@
+	@-x86_64-w64-mingw32-g++ -Werror -m64 -maccumulate-outgoing-args -ffreestanding -c $^ -o $@
 
 all: $(Objects)
 	@-mkdir -p ../Build/ISO/EFI/BOOT/
-	@x86_64-w64-mingw32-gcc $(Objects) -Werror -m64 -nostdlib -shared -Wl,-dll -Wl,--subsystem,10 -e boot -o bootx64.efi
+	@x86_64-w64-mingw32-g++ $(Objects) -Werror -m64 -nostdlib -shared -Wl,-dll -Wl,--subsystem,10 -e boot -o bootx64.efi
